@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Rostelecom-Regular';
+    src: url('../../font/RostelecomBasis-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Rostelecom-Bold';
+    src: url('../../font/RostelecomBasis-Bold.woff2') format('woff2');
+}
+
+.btnPrimary {
+    height: 48px;
+    padding: 0 40px;
+    min-width: 140px;
+    white-space: nowrap;
+
+    font-family: 'Rostelecom-Regular';
+    font-size: 16px;
+    text-decoration: none;
+
+    background-color: var(--color-accent);
+    color: white;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid transparent;
+
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btnPrimary:hover{
+    background-color: var(--color-accentHover);
+}
+
+.btnSecondary{
+    height: 48px;
+    padding: 0 40px;
+    min-width: 140px;
+    white-space: nowrap;
+
+    font-family: 'Rostelecom-Regular';
+    font-size: 16px;
+    text-decoration: none;
+
+    background-color: white;
+    color: var(--color-accent);
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid transparent;
+
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+
+.btnSecondary:hover{
+    background-color: var(--color-secondaryHover);
+}
