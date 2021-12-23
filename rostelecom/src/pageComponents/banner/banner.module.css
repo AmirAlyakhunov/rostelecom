@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Rostelecom-Regular';
+    src: url('../../font/RostelecomBasis-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Rostelecom-Medium';
+    src: url('../../font/RostelecomBasis-Medium.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-family: 'Rostelecom-Bold';
+    src: url('../../font/RostelecomBasis-Bold.woff2') format('woff2');
+}
+
+.bannerContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 392px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.bannerImage{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0.07%, rgba(0, 0, 0, 0) 50%), url('https://mobidevices.ru/images/2018/09/Rebranding-Rostelecom.png');
+    background-size: cover;
+    background-position-x: center;
+    transition: all 0.5s ease;
+
+}
+
+.bannerTxt{
+    font-family:'Rostelecom-Bold';
+    color: white;
+    font-size: 52px;
+    width: 45%;
+    padding: 0 48px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+}
+
+.bannerImage:hover{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0.07%, rgba(0, 0, 0, 0) 50%), url('https://mobidevices.ru/images/2018/09/Rebranding-Rostelecom.png');
+    background-size: cover;
+    background-position-x: center;
+    transform: scale(1.03);
+}

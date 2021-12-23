@@ -4,6 +4,12 @@
 }
 
 @font-face {
+    font-family: 'Rostelecom-Medium';
+    src: url('../../font/RostelecomBasis-Medium.woff2') format('woff2');
+}
+
+
+@font-face {
     font-family: 'Rostelecom-Bold';
     src: url('../../font/RostelecomBasis-Bold.woff2') format('woff2');
 }
@@ -12,7 +18,10 @@
     --color-primary: #101828;
     --color-accent: #FF4F12;
     --color-accentHover: #d33706;
+    --color-accentSecond: #7700ff;
+    --color-accentSecondHover: #5b09c0;
     --color-secondaryHover: #fff6f3;
+    --color-backgroundTab: #f3f3f4;
 }
 
 .header {
@@ -36,6 +45,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    text-decoration: none;
 }
 
 .rtcLogo{
@@ -46,8 +56,22 @@
 .title{
     font-family: 'Rostelecom-Bold';
     font-size: 24px;
+    line-height: 24px;
     color: var(--color-primary);
     text-decoration: none;
+}
+
+.infoContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.locationTxt{
+    font-family: 'Rostelecom-Medium';
+    font-size: 16px;
+    color: var(--color-primary);
+    margin: 0 28px 0 4px;
 }
 
 .account{

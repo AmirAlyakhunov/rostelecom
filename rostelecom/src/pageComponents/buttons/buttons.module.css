@@ -32,6 +32,31 @@
     background-color: var(--color-accentHover);
 }
 
+.btnPrimarySecond {
+    height: 48px;
+    padding: 0 40px;
+    min-width: 140px;
+    white-space: nowrap;
+
+    font-family: 'Rostelecom-Regular';
+    font-size: 16px;
+    text-decoration: none;
+
+    background-color: var(--color-accentSecond);
+    color: white;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid transparent;
+
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btnPrimarySecond:hover{
+    background-color: var(--color-accentSecondHover);
+}
+
+
 .btnSecondary{
     height: 48px;
     padding: 0 40px;

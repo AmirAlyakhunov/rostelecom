@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Rostelecom-Regular';
+    src: url('../../font/RostelecomBasis-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Rostelecom-Medium';
+    src: url('../../font/RostelecomBasis-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Rostelecom-Bold';
+    src: url('../../font/RostelecomBasis-Bold.woff2') format('woff2');
+}
+
+.servicesContainer{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title{
+    font-family: 'Rostelecom-Medium';
+    font-weight: normal;
+    font-size: 32px;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
