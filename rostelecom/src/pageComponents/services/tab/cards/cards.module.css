@@ -132,7 +132,7 @@
 
     font-family: 'Rostelecom-Light';
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-primary);
     padding-bottom: 4px;
     border-bottom: 1px solid var(--color-primary);
@@ -144,7 +144,7 @@
 
     font-family: 'Rostelecom-Light';
     font-weight: normal;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-primary);
 }
 

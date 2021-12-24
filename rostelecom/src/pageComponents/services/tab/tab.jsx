@@ -2,22 +2,25 @@ import React, {useState} from 'react';
 import Style from "./tab.module.css";
 import TabElement from "./tabElement/tabElement";
 
-const Tab = () => {
-    const [counter, setCounter] = useState(1);
-    console.log(counter);
-    function func(){
-        setCounter(counter + 1);
-    }
+const TabComponent = () => {
+
+    const tab = [
+        {id: '3in1', title: 'Комбо 3 в 1'},
+        {id: '4in1', title: 'Комбо 4 в 1'},
+        {id: '2in1', title: 'Комбо 2 в 1'},
+        {id: 'homeInternet', title: 'Домашний интернет'},
+        {id: 'video', title: 'Видеонаблюдение'},
+    ]
+
+    const [activeTab, setActiveTab] = useState(tab[0].id);
 
     return (
         <div className={Style.tabContainer}>
-            <TabElement style={{backgroundColor: '#FF4F12', color:'white'}} onClick={func} disabled={true}>Комбо 3 в 1</TabElement>
-            <TabElement>Комбо 4 в 1</TabElement>
-            <TabElement>Комбо 2 в 1</TabElement>
-            <TabElement>Домашний интернет</TabElement>
-            <TabElement>Видеонаблюдение</TabElement>
+            {
+                tab.map((tabs) => <TabElement isActiveTab={tabs.id === activeTab} setActiveTab={setActiveTab} id={tabs.id} title={tabs.title} key={tabs.id} />)
+            }
         </div>
     );
 };
 
-export default Tab;
+export default TabComponent;

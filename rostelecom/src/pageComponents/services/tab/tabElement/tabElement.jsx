@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import Style from './tabElement.module.css';
 
-const TabElement = ({children, style, onClick, disabled}) => {
+const TabElement = ({id, title, isActiveTab, setActiveTab}) => {
 
     return (
-        <button className={Style.tabElement} style={style} onClick={onClick} disabled={disabled}>{children}</button>
+        <button className={[Style.tabElement, isActiveTab ? Style.tabElementActive : ''].join(' ')} onClick={() => setActiveTab(id)}>{title}</button>
     );
 };
 
