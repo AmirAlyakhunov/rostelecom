@@ -1,11 +1,17 @@
 import React from 'react';
 import Style from './header.module.css'
 import {IconLocation, Logo, LogoRos} from '../../assets/assets';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import ButtonPrimary from "../../pageComponents/buttons/buttonPrimary";
 import ButtonSecondary from "../../pageComponents/buttons/buttonSecondary";
 
 const Header = () => {
+
+    let navigate = useNavigate();
+    function HandleClick() {
+        navigate("/login");
+    }
+
     return (
         <div className={Style.header}>
 
@@ -20,7 +26,7 @@ const Header = () => {
             <div className={Style.infoContainer}>
                 <img src={IconLocation} alt='location'/>
                 <span className={Style.locationTxt}>Санкт-Петербург</span>
-                <ButtonPrimary>Войти</ButtonPrimary>
+                <ButtonPrimary onClick={HandleClick}>Войти</ButtonPrimary>
             </div>
 
         </div>

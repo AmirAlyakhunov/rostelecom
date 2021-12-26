@@ -1,0 +1,62 @@
+.container{
+    top: 0;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    background: white;
+    display: flex;
+    top: 0px;
+    width: 100%;
+    height: 88px;
+    flex-shrink: 0;
+    padding: 0 160px;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+.rtcLogo{
+    width: 28px;
+    margin-right: 16px;
+}
+
+.title{
+    font-family: 'Rostelecom-Bold';
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.formLogin{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 -16px;
+}
+
+.authHeader{
+    font-family: 'Rostelecom-Medium';
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 16px;
+}

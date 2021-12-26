@@ -1,0 +1,20 @@
+.inputBox{
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.inputBox input{
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    background-color: var(--color-backgroundTab);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 0 16px;
+
+    color: var(--color-primary);
+    font-family: 'Rostelecom-Regular';
+    font-size: 16px;
+}

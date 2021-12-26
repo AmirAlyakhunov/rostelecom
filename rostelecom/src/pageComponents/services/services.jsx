@@ -10,7 +10,6 @@ const Services = () => {
         <div className={Style.servicesContainer}>
             <h2 className={Style.title}>Выберите пакет на подключение</h2>
             <TabComponent/>
-            <Cards/>
         </div>
     );
 };

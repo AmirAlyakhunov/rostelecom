@@ -16,7 +16,7 @@
 .servicesContainer{
     display: flex;
     flex-direction: column;
-
+    margin-bottom: 72px;
 }
 
 .title{
@@ -24,6 +24,6 @@
     font-weight: normal;
     font-size: 32px;
     color: var(--color-primary);
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 

@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import Style from './tabElement.module.css';
 
-const TabElement = ({id, title, isActiveTab, setActiveTab}) => {
+const TabElement = ({id, title, isActiveTab, setActiveTab, getCards}) => {
+
 
     return (
         <button className={[Style.tabElement, isActiveTab ? Style.tabElementActive : ''].join(' ')} onClick={() => setActiveTab(id)}>{title}</button>
