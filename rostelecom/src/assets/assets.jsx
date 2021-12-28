@@ -11,3 +11,4 @@ export {default as IconClose} from './icons/close.svg';
 export {default as IconCall} from './icons/call.svg';
 export {default as IconMail} from './icons/mail.svg';
 export {default as IconCloud} from './icons/cloud.svg';
+export {default as IconBack} from './icons/back.svg';

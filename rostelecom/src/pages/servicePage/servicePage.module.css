@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: 61.326% 38.674%;
     margin-top: 64px;
-    margin-bottom: 64px;
+    margin-bottom: 40px;
     padding-top: 48px;
     padding-bottom: 56px;
     box-sizing: border-box;
@@ -75,5 +75,33 @@
     font-family: 'Rostelecom-Regular';
     font-weight: normal;
     font-size: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
+}
+
+.back{
+    opacity: .95;
+    height: 44px;
+    width: fit-content;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    font-family: 'Rostelecom-Medium';
+    font-weight: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: #575d68;
+    transition: all 0.5s ease;
+}
+
+.back:hover{
+    opacity: .7;
+}
+
+.error{
+    height: 40px;
+    margin-top: 24px;
+    font-family: 'Rostelecom-Regular';
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--color-error);
 }

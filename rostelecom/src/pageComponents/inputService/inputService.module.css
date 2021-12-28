@@ -12,13 +12,15 @@
     outline: none;
     border: none;
     border-bottom: 2px solid var(--color-backgroundTab);
-    transition: all 0.2s ease;
+    transition: all 0.5s ease-in-out;
 
     color: var(--color-primary);
     font-family: 'Rostelecom-Regular';
     font-size: 16px;
 }
 
-.inputBox input:focus{
+.inputBox input:focus, .inputBox input:hover {
     border-bottom: 2px solid var(--color-accentSecond);
 }
+
+

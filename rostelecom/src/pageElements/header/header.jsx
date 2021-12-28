@@ -66,8 +66,15 @@ const Header = () => {
                     <img src={IconLocation} alt='location'/>
                     <span className={Style.locationTxt}>Санкт-Петербург</span>
                     {
-                        cookies.access_token ? <button className={Style.account} onClick={Menu}> {user.name} {user.surname} </button> :
-                            <ButtonPrimary onClick={HandleClick}>Войти</ButtonPrimary>
+                        cookies.access_token
+                            ?
+                            <>
+                                {
+                                    openAccount === true ? <button className={Style.account} onClick={MenuClose}> {user.name} {user.surname} </button> : <button className={Style.account} onClick={Menu}> {user.name} {user.surname} </button>
+                                }
+                            </>
+
+                            : <ButtonPrimary onClick={HandleClick}>Войти</ButtonPrimary>
                     }
                 </div>
             </div>

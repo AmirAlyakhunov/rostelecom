@@ -1,20 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import Style from './servicePage.module.css';
 import PostService from "../../API/api";
-import {useNavigate, useParams} from "react-router-dom";
+import {useNavigate, useParams, Link} from "react-router-dom";
 import CardRowCondition from "../../pageComponents/services/tab/cards/cardRowCondition";
-import {IconCloud, IconGlobal, IconPhone, IconPlay, IconTV} from "../../assets/assets";
+import {IconBack, IconCloud, IconGlobal, IconPhone, IconPlay, IconTV} from "../../assets/assets";
 import InputService from "../../pageComponents/inputService/inputService";
 import ButtonPrimary from "../../pageComponents/buttons/buttonPrimary";
-import LinkTo from "../../pageComponents/buttons/link";
 import axios from "axios";
 import {useCookies} from "react-cookie";
+import ScrollToTopOnMount from "../../scrollFunction/scrollToTop";
+import SuccessWindow from "../../pageComponents/successWindow/successWindow";
 
 const ServicePage = () => {
     const params = useParams();
     const [data, setData] = useState({});
     const [errorMessage, setErrorMessage] = useState('');
     const [cookies] = useCookies(['access_token']);
+    const [success, setSuccess] = useState(false);
     const url ='https://rostelekek.herokuapp.com/order';
 
     useEffect(() => {
@@ -34,7 +36,6 @@ const ServicePage = () => {
         setService(newData);
     }
 
-    let navigate = useNavigate();
 
     async function getData(){
         const response = await PostService.getById(params.id)
@@ -52,7 +53,7 @@ const ServicePage = () => {
             flat: parseInt(service.flat),
         }, {headers: {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cookies.access_token}})
             .then(function (response){
-                if(response.status === 201) navigate ('/', {replace: true})
+                if(response.status === 201) setSuccess (true)
             }).catch((err) => {
             setErrorMessage(err.response.data?.message)
         })
@@ -61,8 +62,11 @@ const ServicePage = () => {
 
     return (
         <div className={Style.container}>
+            <ScrollToTopOnMount/>
+            {
+                success === true ? <SuccessWindow/> : false
+            }
             <div className={Style.requestContainer}>
-
                 <div className={Style.leftContainer}>
                     <div className={Style.requestHeader}>Заявка на подключение</div>
                     <div className={Style.requestTitle}>Ваш город: Санкт-Петербург</div>
@@ -70,18 +74,17 @@ const ServicePage = () => {
                         <form autoComplete="off" onSubmit={(e)=>submit(e)}>
                             <InputService onChange={(e) => handle(e)} id={'street'} value={service.street} type={'text'} placeholder={'Улица'}/>
                             <div style={{display: 'flex', flexDirection: 'row', marginBottom: '16px'}}>
-                                <InputService style={{marginRight: '40px'}} onChange={(e) => handle(e)} id={'house'} value={service.house} type={'number'} placeholder={'Дом'}/>
-                                <InputService onChange={(e) => handle(e)} id={'flat'} value={service.flat} type={'number'} placeholder={'Квартира'}/>
+                                <InputService style={{marginRight: '40px'}} onChange={(e) => handle(e)} id={'house'} value={service.house} type={'text'} placeholder={'Дом'}/>
+                                <InputService onChange={(e) => handle(e)} id={'flat'} value={service.flat} type={'text'} placeholder={'Квартира'}/>
                             </div>
                             <div className={Style.txt}>
-                                На Вашу почту будет отправлено письмо о подтверждении заказа
+                                На Вашу почту будет отправлено письмо c подтверждением обращения
                             </div>
                             <ButtonPrimary>Отправить заявку</ButtonPrimary>
                         </form>
-                        <p>{errorMessage}</p>
+                        <div className={Style.error}>{errorMessage}</div>
                     </div>
                 </div>
-
 
                 <div className={Style.rightContainer}>
                     <div className={Style.requestTitle}>{data.name}</div>
@@ -108,7 +111,7 @@ const ServicePage = () => {
                     </>
                 </div>
             </div>
-
+            <Link to={'/'} className={Style.back}> <img src={IconBack} style={{marginRight: '16px'}}/> Вернуться к выбору тарифа</Link>
         </div>
     );
 };

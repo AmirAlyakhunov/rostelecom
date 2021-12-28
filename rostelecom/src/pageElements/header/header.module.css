@@ -89,7 +89,7 @@
     font-size: 20px;
     color: var(--color-primary);
     border-bottom: 1px dashed var(--color-primary);
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 
 .account:hover{
