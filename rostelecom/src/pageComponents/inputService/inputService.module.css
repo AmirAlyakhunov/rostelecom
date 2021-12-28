@@ -1,0 +1,24 @@
+.inputBox{
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.inputBox input{
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--color-backgroundTab);
+    transition: all 0.2s ease;
+
+    color: var(--color-primary);
+    font-family: 'Rostelecom-Regular';
+    font-size: 16px;
+}
+
+.inputBox input:focus{
+    border-bottom: 2px solid var(--color-accentSecond);
+}

@@ -81,3 +81,24 @@
 .btnSecondary:hover{
     background-color: var(--color-secondaryHover);
 }
+
+.link{
+    font-family: 'Rostelecom-Regular';
+    font-size: 16px;
+    color: var(--color-accentSecond);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.link:hover{
+    color: var(--color-accentSecondHover);
+}
+
+.btnClose{
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}

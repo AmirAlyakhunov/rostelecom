@@ -16,17 +16,19 @@ const TabComponent = () => {
 
     const [card, setCard] = useState([])
 
-   useEffect(() => {
-       getCards()
-   }, [])
+    const [activeTab, setActiveTab] = useState(tab[0].id);
 
-   async function getCards() {
+    async function getCards() {
         const response = await PostService.getService(activeTab);
         setCard(response.data);
    }
 
-    const [activeTab, setActiveTab] = useState(tab[0].id);
-    console.log (activeTab)
+   console.log(card);
+
+    useEffect(() => {
+        getCards()
+    }, [activeTab])
+
     return (
         <>
             <div className={Style.tabContainer}>
@@ -36,10 +38,9 @@ const TabComponent = () => {
             </div>
              <div className={Style.container}>
                  {
-                     card.map((data) => <Cards data={data} id={data.id} name={data.name} internet={data.internet} tv={data.tv} mobile={data.mobile} price={data.price} key={data.id}/>)
+                     card.map((data) => <Cards data={data} id={data.id} name={data.name} internet={data.internet} tv={data.tv} mobile={data.mobile} films={data.films} video={data.video} price={data.price} key={data.id}/>)
                  }
              </div>
-
         </>
 
     );

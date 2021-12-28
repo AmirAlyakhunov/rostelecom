@@ -6,3 +6,8 @@ export {default as IconPhone} from './icons/phone.svg';
 export {default as IconScreen} from './icons/screen.svg';
 export {default as IconPlay} from './icons/play.svg';
 export {default as IconTV} from './icons/tv.svg';
+export {default as IconUser} from './icons/user.svg';
+export {default as IconClose} from './icons/close.svg';
+export {default as IconCall} from './icons/call.svg';
+export {default as IconMail} from './icons/mail.svg';
+export {default as IconCloud} from './icons/cloud.svg';

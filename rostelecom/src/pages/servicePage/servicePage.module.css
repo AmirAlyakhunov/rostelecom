@@ -1,0 +1,79 @@
+.container{
+    height: 100%;
+    background-color: var(--color-backgroundService);
+    padding: 0 314px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.requestContainer{
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 61.326% 38.674%;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    padding-top: 48px;
+    padding-bottom: 56px;
+    box-sizing: border-box;
+}
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--color-backgroundTab);
+}
+
+.rightContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.requestHeader{
+    color: var(--color-primary);
+    font-family: 'Rostelecom-Medium';
+    font-weight: normal;
+    font-size: 36px;
+    padding: 0 48px;
+    margin-bottom: 24px;
+}
+
+.requestTitle{
+    color: var(--color-primary);
+    font-family: 'Rostelecom-Medium';
+    font-weight: normal;
+    font-size: 20px;
+    padding: 0 48px;
+    margin-bottom: 16px;
+}
+
+.rows{
+    padding: 0 0 24px 0;
+    border-bottom: 1px solid var(--color-backgroundTab);
+    margin: 0 48px 24px 48px;
+}
+
+.price{
+    color: var(--color-primary);
+    font-family: 'Rostelecom-Regular';
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0 48px;
+}
+
+.form{
+    padding: 24px 48px 0 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.txt{
+    color: var(--color-primary);
+    opacity: .6;
+    font-family: 'Rostelecom-Regular';
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 32px;
+}

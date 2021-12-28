@@ -1,13 +1,13 @@
 import React from 'react';
 import Style from './cards.module.css';
 
-const CardRowCondition = ({children, src, style}) => {
+const CardRowCondition = ({service, servicedesc, src, style}) => {
     return (
         <div className={Style.condition} style={style}>
-            <img src={src} alt='internet'/>
+            <img src={src}/>
             <div className={Style.conditionTxt}>
-                <p className={Style.conditionName}>{children}</p>
-                <p className={Style.conditionSubName}>{children}</p>
+                <p className={Style.conditionName}>{service}</p>
+                <p className={Style.conditionSubName}>{servicedesc}</p>
             </div>
         </div>
     );
