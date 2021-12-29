@@ -48,6 +48,15 @@
     margin-bottom: 16px;
 }
 
+.requestCity{
+    color: var(--color-primary);
+    font-family: 'Rostelecom-Medium';
+    font-weight: normal;
+    font-size: 20px;
+    padding: 0 48px;
+    margin-bottom: 16px;
+}
+
 .rows{
     padding: 0 0 24px 0;
     border-bottom: 1px solid var(--color-backgroundTab);
@@ -130,7 +139,10 @@
         font-size: 32px;
         padding: 0px;
     }
-
+    .requestCity{
+        padding: 0 24px;
+        margin: 0 -24px 16px -24px;
+    }
     .requestTitle{
         padding: 0 24px;
     }

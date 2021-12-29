@@ -69,7 +69,7 @@ const ServicePage = () => {
             <div className={Style.requestContainer}>
                 <div className={Style.leftContainer}>
                     <div className={Style.requestHeader}>Заявка на подключение</div>
-                    <div className={Style.requestTitle} style={{margin: '0 -24px 16px -24px'}}>Ваш город: Санкт-Петербург</div>
+                    <div className={Style.requestCity}>Ваш город: Санкт-Петербург</div>
                     <div className={Style.form}>
                         <form autoComplete="off" onSubmit={(e)=>submit(e)}>
                             <InputService onChange={(e) => handle(e)} id={'street'} value={service.street} type={'text'} placeholder={'Улица'}/>
