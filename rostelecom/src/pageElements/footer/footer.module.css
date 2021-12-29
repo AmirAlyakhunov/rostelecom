@@ -10,3 +10,10 @@
     color: white;
 
 }
+
+@media (max-width: 770px) {
+    .container {
+        padding: 0 16px;
+        font-size: 18px;
+    }
+}

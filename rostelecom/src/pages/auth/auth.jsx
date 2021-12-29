@@ -54,7 +54,7 @@ const Auth = () => {
                 <h2 className={Style.authHeader}>Авторизация</h2>
                 <Input onChange={(e) => handle(e)} id={'email'} value={data.email} type={'text'} placeholder={'Электронная почта'}/>
                 <Input onChange={(e) => handle(e)} id={'password'} value={data.password} type={'password'} placeholder={'Пароль'}/>
-                <ButtonPrimary style={{width: '100%'}}>Войти</ButtonPrimary>
+                <ButtonPrimary style={{width: '100%', height:'48px'}}>Войти</ButtonPrimary>
                 <div className={Style.linkContaier}>
                     Нет аккаунта? 
                     <LinkTo src={'/registration'}>Зарегистрироваться</LinkTo>

@@ -65,7 +65,7 @@ const Registration = () => {
                 <InputMask className={Style.inputMask} mask="+7 (999) 999-99-99" onChange={(e) => handle(e)} id={'phone'} value={data.phone} placeholder={'Телефон'}/>
                 <Input onChange={(e) => handle(e)} id={'email'} value={data.email} type={'text'} placeholder={'Электронная почта'}/>
                 <Input onChange={(e) => handle(e)} id={'password'} value={data.password} type={'password'} placeholder={'Пароль'}/>
-                <ButtonPrimary style={{width: '100%'}}>Зарегистрироваться</ButtonPrimary>
+                <ButtonPrimary style={{width: '100%', height: '48px'}}>Зарегистрироваться</ButtonPrimary>
                 <div className={Style.linkContaier}>
                     Уже есть аккаунт? 
                     <LinkTo src={'/login'}>Войти в систему</LinkTo>

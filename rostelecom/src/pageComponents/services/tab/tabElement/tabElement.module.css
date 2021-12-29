@@ -26,3 +26,9 @@
     background-color: var(--color-accent);
     color: white !important;
 }
+
+@media (max-width: 770px) {
+    .tabElement{
+        min-width: fit-content;
+    }
+}

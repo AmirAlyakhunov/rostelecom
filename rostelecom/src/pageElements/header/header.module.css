@@ -31,7 +31,6 @@
     background: white;
     display: flex;
     flex-wrap: nowrap;
-    max-width: 100%;
     position: sticky;
     z-index: 10;
     top: 0px;
@@ -94,4 +93,24 @@
 
 .account:hover{
     opacity: .85;
+}
+
+@media (max-width: 770px) {
+    .header{
+        height: 64px;
+        padding: 0 16px;
+    }
+    .rtcLogo{
+        width: 24px;
+    }
+    .title{
+        display: none;
+    }
+    .locationTxt{
+        font-size: 14px;
+    }
+    .account{
+        font-size: 16px;
+    }
+
 }

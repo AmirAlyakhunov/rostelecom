@@ -1,11 +1,9 @@
 .container{
-    position: absolute;
-    z-index: 2;
     top: 0;
     left: 0;
     box-sizing: border-box;
     width: 100%;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 248px);
     padding: 88px 160px;
     display: flex;
     align-items: center;
@@ -33,15 +31,10 @@
 @media (max-width: 770px) {
     .container{
         padding: 88px 16px;
-        height: 100%;
-        position: fixed;
+        height: calc(100vh - 224px);
     }
     .title{
-        text-align: center;
         margin-bottom: 32px;
         font-size: 32px;
-    }
-    .txt{
-        text-align: center;
     }
 }

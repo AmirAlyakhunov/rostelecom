@@ -5,3 +5,9 @@
     padding: 0 160px;
     margin-top: 40px;
 }
+
+@media (max-width: 770px) {
+    .container{
+        padding: 0 16px;
+    }
+}
